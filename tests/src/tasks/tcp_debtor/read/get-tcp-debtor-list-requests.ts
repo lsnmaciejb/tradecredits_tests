@@ -5,9 +5,9 @@ import { TradeDev } from "../../constants";
 
 
 
-export class GetLimitRequestList extends RestTask<any>{
+export class GetDebtorList extends RestTask<any>{
 
-    name = 'get tcp Limit request list'
+    name = 'get tcp Debtor list'
 
     constructor() {
 
@@ -20,10 +20,10 @@ export class GetLimitRequestList extends RestTask<any>{
     }
 
     beforeRequest(holder: any): void {
-       
+
     }
     async process(holder: any): Promise<any> {
-        this.response = await this.http.get(`/api/trade-credits/secured/limit/request/list`, holder.queryParams).disableTLSCerts();
+        this.response = await this.http.get(`/api/trade-credits/secured/debtor/list`, holder.queryParams).disableTLSCerts();
 
     }
     assertions(holder: any): void {
