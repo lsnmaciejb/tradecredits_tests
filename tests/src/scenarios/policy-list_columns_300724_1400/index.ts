@@ -36,6 +36,19 @@ const steps: TestStep<any>[] = [
                 offset: 0
             };
         }
+    },
+    {
+        task: new GetPolicyList,
+
+        name: 'order by Numer polisy asc',
+        beforeRequest(holder: any, _task): void {
+            holder.queryParams = {
+                orderBy: 'policyNumber',
+                orderDirection: 'asc',
+                limit: 10,
+                offset: 0
+            };
+        }
     }
 
 
