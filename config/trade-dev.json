@@ -1,0 +1,6 @@
+{
+  "env": "dev",
+  "baseUrl": {
+    "trade-dev": "http://portainer.lsnova.local:4019"
+  }
+}

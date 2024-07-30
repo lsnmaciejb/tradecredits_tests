@@ -1,0 +1,8 @@
+node_modules
+build
+mochawesome-report
+.idea/
+.DS_Store
+/cli.js
+/tests/**/*.js
+/results

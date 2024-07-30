@@ -1,0 +1,17 @@
+{
+  "name": "portal.tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cli": "tsc 2> /dev/null && node cli.js --timeout 60000",
+    "sandbox": "tsc && node ./node_modules/.bin/mocha tests/ --config=./config/trade-dev.json --timeout 60000 --scenarios=SANDBOX"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lsnova/supertest": "github:lsnova/supertest.framework#1.0.7",
+
+    "typescript": "^5.2.2"
+  }
+}
