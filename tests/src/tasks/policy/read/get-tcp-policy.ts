@@ -7,7 +7,7 @@ import { TradeDev } from "../../constants";
 
 export class GetPolicy extends RestTask<any>{
 
-    name = 'get tcp policy'
+    name = 'get tcp Policy view'
 
     constructor() {
 

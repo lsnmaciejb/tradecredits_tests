@@ -3,7 +3,7 @@ import { TestStep } from "@lsnova/supertest/dist/step/test.step"
 
 import { CreateUserToken } from "../../tasks/authorization/create-user-token/create-trade-user-token.task";
 
-import { GetLimitRequestList } from "../../tasks/tcp_limit/read/get-tcp-limit-request-list";
+import { GetLimitRequestList } from "../../tasks/limit/read/get-limit-request-list";
 
 
 

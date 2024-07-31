@@ -2,7 +2,7 @@ import { TestStep } from "@lsnova/supertest/dist/step/test.step"
 
 
 import { CreateUserToken } from "../../tasks/authorization/create-user-token/create-trade-user-token.task";
-import { GetFactorList } from "../../tasks/tcp_factor/read/get-tcp-factor-list";
+import { GetFactorList } from "../../tasks/factor/read/get-factor-list";
 
 
 

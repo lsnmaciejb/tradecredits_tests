@@ -3,7 +3,7 @@ import { TestStep } from "@lsnova/supertest/dist/step/test.step"
 import { expect } from "chai";
 import { CreateUserToken } from "../../tasks/authorization/create-user-token/create-trade-user-token.task";
 
-import { GetPolicyList } from "../../tasks/tcp_policy/read/get-tcp-policy-list";
+import { GetPolicyList } from "../../tasks/policy/read/get-policy-list";
 
 
 
