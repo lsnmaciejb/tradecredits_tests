@@ -5,4 +5,5 @@ export const TradeDev = 'trade-dev';
 //access_token:
 
 
-export const userToken = null
+//export const userToken = null
+export const userToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJMU05fR1VJXzIwMDAwMyIsInNlc3MiOiJMU05fR1VJXzIwMDAwMzpudWxsOjc3NWUxZThhLWMzZjYtNDNmZS04OTQwLTUyZDJjODM5YWUwOSIsImlzcyI6Ik9jZWFuR2F0ZXdheSIsImV4cCI6MTcyMjk0OTI3OSwiaWF0IjoxNzIyOTQ3NDc5fQ.8pxJZF6uacNvyv3gX5-qAhMy_zlc6BXIHGN-UD4k1JnkGDcnUbiuiTdZh0_WqduPvhKAsoGoRi2Vk8dZ4L8acw"

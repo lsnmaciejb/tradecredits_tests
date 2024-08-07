@@ -67,29 +67,50 @@ const steps: TestStep<any>[] = [
                 { code: 'PKD_BLACKLIST', description: 'Czarna lista PKD' },
                 { code: 'RISK', description: 'Ryzyko' },
                 { code: 'SCORING', description: 'Ocena scoringowa' },
-                
+
             ];
 
-            interface apiResult {
+            // expectedResults.forEach((item: Result) => {
+            //     console.log(`Code: ${item.code}, Description: ${item.description}`);
+            // })
+
+
+
+            ///syllabus
+            // const numbers = [28, 77, 45, 99, 27];
+            // numbers.forEach(number => {
+            //     console.log(number);
+            // });
+            ///syllabus
+
+            response.forEach((item: { code: any; }) => {
+                console.log(item.code)
+            })
+
+
+            ////////// ajjjjjjj
+            interface Result {
                 code: string;
                 description: string;
             }
 
+            const tablicA: Result[] = [
+                { code: '111', description: 'aaa' },
+                { code: '222', description: 'bbb' },
+                { code: '333', description: 'ccc' },
+                { code: '444', description: 'ddd' },
+            ];
 
-            function transformApiResponse(response: Result[]) {
-                return response.map(item => ({
-                    code: item.code,
-                    description: item.description
-                }));
-            }
+            const tablicB: Result[] = [
+                { code: '111', description: 'aaa' },
+                { code: '333', description: 'ccc' },
+                { code: '444', description: 'ddd' },
+                { code: '444', description: 'ddd' },
+                { code: '222', description: 'bbb' },
+            ];
 
-            // Przekształcamy odpowiedź API
-            const transformedResponse = transformApiResponse(response);
-
-
-            // Funkcja porównująca tablice
             function arraysHaveSameElements(arr1: Result[], arr2: Result[]): void {
-                assert.strictEqual(arr1.length, arr2.length, 'Arrays have different lengths');
+                //assert.strictEqual(arr1.length, arr2.length, 'Arrays have different lengths');
 
                 arr1.forEach(item1 => {
                     const match = arr2.find(item2 => item1.code === item2.code && item1.description === item2.description);
@@ -103,8 +124,12 @@ const steps: TestStep<any>[] = [
             }
 
             // Wywołanie funkcji porównującej
-            arraysHaveSameElements(expectedResults, transformedResponse);
+            arraysHaveSameElements(tablicA, tablicB);
             console.log('All elements match');
+
+            console.log(response[0])
+
+
         }
 
     }

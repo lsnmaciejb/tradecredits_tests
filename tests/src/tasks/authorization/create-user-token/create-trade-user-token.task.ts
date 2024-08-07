@@ -52,7 +52,8 @@ export class CreateUserToken extends RestTask<{}> {
         if (ConfigSingleton.instance().config.env == 'int' || ConfigSingleton.instance().config.env == 'prep') {
             this.response = await superagent.post(`${ConfigSingleton.instance().config.baseUrl.utils}/getTokenFromAzure`, this.request);
         } else {
-            this.response = await this.http.put('/api/portal/public/users/me', this.request).disableTLSCerts()
+            this.response = await this.http.post('/gateway/authorize/user', this.request).disableTLSCerts()
         }
     }
 }
+
