@@ -66,25 +66,20 @@ const steps: TestStep<any>[] = [
                 { code: 'DEBT_EXCHANGE_BAILIFF_EXECUTIONS', description: 'Egzekucje komornicze' },
                 { code: 'PKD_BLACKLIST', description: 'Czarna lista PKD' },
                 { code: 'RISK', description: 'Ryzyko' },
-                { code: 'SCORING', description: 'Ocena scoringowa' },
+                { code: 'SCORING', description: 'Ocena scoringowa' }
                 
             ];
 
-            interface apiResult {
-                code: string;
-                description: string;
-            }
 
+            // function transformApiResponse(response: Result[]) {
+            //     return response.map(item => ({
+            //         code: item.code,
+            //         description: item.description
+            //     }));
+            // }
 
-            function transformApiResponse(response: Result[]) {
-                return response.map(item => ({
-                    code: item.code,
-                    description: item.description
-                }));
-            }
-
-            // Przekształcamy odpowiedź API
-            const transformedResponse = transformApiResponse(response);
+            // // Przekształcamy odpowiedź API
+            // const transformedResponse = transformApiResponse(response);
 
 
             // Funkcja porównująca tablice
@@ -103,7 +98,7 @@ const steps: TestStep<any>[] = [
             }
 
             // Wywołanie funkcji porównującej
-            arraysHaveSameElements(expectedResults, transformedResponse);
+            arraysHaveSameElements(expectedResults, response);
             console.log('All elements match');
         }
 
