@@ -71,12 +71,12 @@ const steps: TestStep<any>[] = [
 
                 arr1.forEach(item1 => {
                     const match = arr2.find(item2 => item1.code === item2.code && item1.description === item2.description);
-                    assert(match, `Element with code ${item1.code} and description ${item1.description} not found in second array`);
+                    assert(match, `Element with code ${item1.code} and description ${item1.description} not found in apiResponse(second array)`);
                 });
 
                 arr2.forEach(item1 => {
                     const match = arr1.find(item2 => item1.code === item2.code && item1.description === item2.description);
-                    assert(match, `Element with code ${item1.code} and description ${item1.description} not found in first array`);
+                    assert(match, `Element with code ${item1.code} and description ${item1.description} not found in expectedResults(first array)`);
                 });
             }
 
