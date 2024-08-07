@@ -26,11 +26,6 @@ const steps: TestStep<any>[] = [
             const response = task.response?.body
 
 
-            // console.log('eeeeeeeeee', response[0].description)
-            // assert.equal(response[0].description, 'LA Zobowiązań do aktywów')
-
-
-
             interface Result {
                 code: string;
                 description: string;
@@ -67,20 +62,8 @@ const steps: TestStep<any>[] = [
                 { code: 'PKD_BLACKLIST', description: 'Czarna lista PKD' },
                 { code: 'RISK', description: 'Ryzyko' },
                 { code: 'SCORING', description: 'Ocena scoringowa' }
-                
+
             ];
-
-
-            // function transformApiResponse(response: Result[]) {
-            //     return response.map(item => ({
-            //         code: item.code,
-            //         description: item.description
-            //     }));
-            // }
-
-            // // Przekształcamy odpowiedź API
-            // const transformedResponse = transformApiResponse(response);
-
 
             // Funkcja porównująca tablice
             function arraysHaveSameElements(arr1: Result[], arr2: Result[]): void {
