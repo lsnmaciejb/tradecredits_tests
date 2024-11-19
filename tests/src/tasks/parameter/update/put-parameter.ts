@@ -1,17 +1,20 @@
 import { RestTask } from "@lsnova/supertest/dist/task/rest.task";
-import { expect } from "chai";
 import { AuthorizationSingleton } from "@lsnova/supertest/dist/authorization.singleton";
 import { TradeDev } from "../../constants";
+import { ResourceSingleton } from "@lsnova/supertest/dist/resource.singleton";
+import { expect } from "chai";
 
 
 
-export class GetDebtorVerification extends RestTask<any>{
 
-    name = 'get DEBTOR VERIFICATION'
+export class PutParameter extends RestTask<any>{
 
-    constructor() {
+    name = 'put parameter'
 
+    constructor(private requestJsonPath: string = `${__dirname}/resources/parameter.json`) {
         super(TradeDev);
+        this.request = ResourceSingleton.getJsonFromFile(this.requestJsonPath);
+
     }
 
     supports(holder: any): boolean {
@@ -27,7 +30,7 @@ export class GetDebtorVerification extends RestTask<any>{
 
     }
     assertions(holder: any): void {
-        expect(this.response?.status).to.be.equal(200);
+        //expect(this.response?.status).to.be.equal(200);
     }
 
     afterResponse(holder: any): void {

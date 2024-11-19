@@ -3,7 +3,7 @@ import { TestStep } from "@lsnova/supertest/dist/step/test.step"
 
 import { CreateUserToken } from "../../tasks/authorization/create-user-token/create-trade-user-token.task";
 
-import { GetDebtorVerification } from "../../tasks/debtor-verification/read/get-debtor-verification";
+import { GetDebtorVerification } from "../../tasks/parameter/read/get-debtor-verification";
 
 
 
